@@ -13,3 +13,14 @@ npm run dev   # http://localhost:3000
 - Photos: `public/notebook/`
 - Sections: `src/components/sections/`
 - Cursor & motion: `src/components/Cursor.tsx`, `src/components/motion/`
+
+## Deploying (Cloudflare Workers)
+
+The site is a static export (`output: "export"` in `next.config.ts`): `npm run build` writes plain files to `out/`, and `wrangler.jsonc` tells Cloudflare to serve that folder as static assets. There is no server code to crash.
+
+In Cloudflare → Workers → this project → Settings → Build:
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+Preview locally the same way Cloudflare runs it: `npm run build && npx wrangler dev`.
