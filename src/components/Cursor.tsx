@@ -26,15 +26,15 @@ function targetFor(mode: Mode, pressed: boolean): RingTarget {
   const press = pressed ? 0.85 : 1;
   switch (mode) {
     case "hover":
-      return { scaleX: 2 * press, scaleY: 2 * press, bg: "rgba(139,108,255,0.18)", border: "rgba(139,108,255,0.6)", dot: 0.4, label: 0, blend: "difference" };
+      return { scaleX: 2 * press, scaleY: 2 * press, bg: "rgba(199,168,88,0.18)", border: "rgba(199,168,88,0.6)", dot: 0.4, label: 0, blend: "difference" };
     case "view": {
       const s = (VIEW_SIZE / RING) * press;
-      return { scaleX: s, scaleY: s, bg: "#8b6cff", border: "rgba(139,108,255,1)", dot: 0, label: 1, blend: "normal" };
+      return { scaleX: s, scaleY: s, bg: "#c7a858", border: "rgba(199,168,88,1)", dot: 0, label: 1, blend: "normal" };
     }
     case "text":
-      return { scaleX: 0.07 * press, scaleY: 1.4, bg: "#edebf5", border: "rgba(237,235,245,0)", dot: 0, label: 0, blend: "difference" };
+      return { scaleX: 0.07 * press, scaleY: 1.4, bg: "#f2f0ea", border: "rgba(242,240,234,0)", dot: 0, label: 0, blend: "difference" };
     default:
-      return { scaleX: press, scaleY: press, bg: "rgba(139,108,255,0)", border: "rgba(237,235,245,0.35)", dot: 1, label: 0, blend: "difference" };
+      return { scaleX: press, scaleY: press, bg: "rgba(199,168,88,0)", border: "rgba(242,240,234,0.35)", dot: 1, label: 0, blend: "difference" };
   }
 }
 
@@ -191,7 +191,7 @@ export function Cursor() {
             width: RING,
             height: RING,
             borderRadius: "50%",
-            border: "1px solid rgba(237,235,245,0.35)",
+            border: "1px solid rgba(242,240,234,0.35)",
             boxSizing: "border-box",
           }}
         />

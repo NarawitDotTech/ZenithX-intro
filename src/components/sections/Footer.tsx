@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { team } from "@/content/notebook";
 
@@ -19,15 +20,19 @@ export const Footer = () => (
         </Magnetic>
       </div>
 
-      <p
-        aria-hidden
-        className="mt-20 text-[clamp(4rem,20vw,18rem)] leading-[0.8] font-bold tracking-[-0.05em] text-transparent select-none [-webkit-text-stroke:1px_var(--line-strong)]"
-      >
-        {team.number}
-      </p>
+        <div className="mt-20 flex items-end justify-between gap-6">
+        <p
+          aria-hidden
+          className="text-[clamp(4rem,20vw,18rem)] leading-[0.8] font-bold tracking-[-0.05em] text-transparent select-none [-webkit-text-stroke:1px_var(--line-strong)]"
+        >
+          {team.number}
+        </p>
+      <Logo className="hidden w-[min(22vw,260px)] shrink-0 text-accent sm:block" />
+      </div>
 
       <div className="mt-8 flex flex-col justify-between gap-2 border-t border-line pt-6 font-mono text-xs text-muted sm:flex-row">
-        <span>
+        <span className="flex items-center gap-2">
+          <Logo className="h-4 w-auto text-accent" />
           {team.name} · FTC Team #{team.number}
         </span>
         <span>Built from our engineering notebook</span>

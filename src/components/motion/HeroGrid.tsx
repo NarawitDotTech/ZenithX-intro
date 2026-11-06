@@ -70,7 +70,7 @@ export function HeroGrid() {
           ref={glowRef}
           className="absolute -left-[360px] -top-[360px] h-[720px] w-[720px] rounded-full will-change-transform"
           style={{
-            background: "radial-gradient(circle, rgb(139 108 255 / 0.28) 0%, rgb(139 108 255 / 0.1) 38%, transparent 68%)",
+            background: "radial-gradient(circle, rgb(199 168 88 / 0.28) 0%, rgb(199 168 88 / 0.1) 38%, transparent 68%)",
           }}
         />
         <div ref={crossRef} className="absolute left-0 top-0 opacity-0 will-change-transform">

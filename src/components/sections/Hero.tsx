@@ -1,4 +1,5 @@
 import { HeroGrid } from "@/components/motion/HeroGrid";
+import { HeroLogo } from "@/components/motion/HeroLogo";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
@@ -15,6 +16,7 @@ export const Hero = () => (
   <section id="top" className="relative isolate flex min-h-svh flex-col justify-end overflow-hidden pt-28 pb-12">
     <HeroGrid />
     <div className="relative mx-auto w-full max-w-7xl px-4 md:px-8">
+      <HeroLogo className="mb-8 w-24 md:pointer-events-none md:absolute md:-top-40 md:right-8 md:mb-0 md:w-[min(28vw,400px)]" />
       <Reveal>
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-muted">
           FIRST Tech Challenge · {team.season} · Engineering notebook
@@ -25,7 +27,7 @@ export const Hero = () => (
         text={team.name.toUpperCase()}
         as="h1"
         trigger="load"
-        className="text-[clamp(4rem,17vw,15rem)] font-bold leading-[0.85] tracking-[-0.04em]"
+        className="text-[clamp(4rem,17vw,15rem)] md:text-[clamp(4rem,12.5vw,13rem)] font-bold leading-[0.85] tracking-[-0.04em]"
       />
 
       <div className="mt-8 grid gap-10 md:mt-10 md:grid-cols-[1fr_auto] md:items-end">

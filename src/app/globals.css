@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
-/* Zenith X design tokens — dark "blueprint" surface, one violet accent (team shirt colour). */
+/* Zenith X design tokens — dark "blueprint" surface, one gold accent (from the hornet logo). */
 :root {
-  --bg: #0b0a12;
-  --surface: #13111d;
-  --surface-2: #1b1828;
+  --bg: #0a0a0b;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
   --line: rgb(255 255 255 / 0.08);
   --line-strong: rgb(255 255 255 / 0.16);
-  --text: #edebf5;
-  --muted: #9a96ad;
-  --accent: #8b6cff;
-  --accent-soft: rgb(139 108 255 / 0.14);
-  --accent-ink: #0b0a12;
+  --text: #f2f0ea;
+  --muted: #a09d94;
+  --accent: #c7a858;
+  --accent-soft: rgb(199 168 88 / 0.14);
+  --accent-ink: #0a0a0b;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 160ms;

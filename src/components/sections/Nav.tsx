@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { team } from "@/content/notebook";
 
 const links = [
@@ -13,10 +14,8 @@ export const Nav = () => (
     className="fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/70 backdrop-blur-md"
   >
     <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
-      <a href="#top" className="flex items-center gap-2.5 font-semibold tracking-tight">
-        <span className="grid size-8 place-items-center rounded-md bg-accent font-mono text-sm font-bold text-[var(--accent-ink)]">
-          ZX
-        </span>
+      <a href="#top" aria-label={`${team.name} home`} className="flex items-center gap-2.5 font-semibold tracking-tight">
+        <Logo className="h-8 w-auto text-accent" />
         <span className="hidden sm:inline">{team.name}</span>
       </a>
       <ul className="flex items-center gap-1 text-sm text-muted sm:gap-2">
