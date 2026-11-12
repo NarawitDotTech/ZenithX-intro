@@ -16,7 +16,7 @@ export const Log = () => (
       <ol className="relative md:ml-[180px]">
         <span aria-hidden className="absolute top-2 bottom-0 left-[5px] w-px bg-line md:-left-[1px]" />
         {log.map((entry) => (
-          <li key={entry.iso} className="relative pb-16 pl-10 last:pb-0 md:pl-14">
+          <li key={entry.key} className="relative pb-16 pl-10 last:pb-0 md:pl-14">
             <span
               aria-hidden
               className="absolute top-2 left-0 size-[11px] rounded-full border-2 border-accent bg-bg md:-left-[6px]"
@@ -46,8 +46,8 @@ export const Log = () => (
                         </p>
                       ) : null}
                       <ul className="space-y-1.5 text-lg leading-relaxed text-muted">
-                        {group.items.map((item) => (
-                          <li key={item} className="flex gap-3">
+                        {group.items.map((item, ii) => (
+                          <li key={`${ii}-${item}`} className="flex gap-3">
                             <span aria-hidden className="mt-[0.7em] h-px w-3 shrink-0 bg-line-strong" />
                             {item}
                           </li>
@@ -66,7 +66,7 @@ export const Log = () => (
                 }`}
               >
                 {entry.photos.map((photo, pi) => (
-                  <Reveal key={photo.src} delay={pi * 0.06}>
+                  <Reveal key={`${photo.src}-${pi}`} delay={pi * 0.06}>
                     <PhotoFrame
                       photo={photo}
                       className="aspect-[4/3]"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 
 type Mode = "default" | "hover" | "view" | "text";
@@ -40,6 +41,8 @@ function targetFor(mode: Mode, pressed: boolean): RingTarget {
 
 export function Cursor() {
   const [enabled, setEnabled] = useState(false);
+  // The admin panel is a form-heavy tool: keep the normal cursor there.
+  const onAdmin = usePathname()?.startsWith("/admin") ?? false;
   const dotRef = useRef<HTMLDivElement>(null);
   const ringWrapRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
@@ -51,7 +54,7 @@ export function Cursor() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     const root = document.documentElement;
     const sync = () => {
-      const on = fine.matches && !reduced.matches;
+      const on = !onAdmin && fine.matches && !reduced.matches;
       setEnabled(on);
       root.classList.toggle("has-custom-cursor", on);
     };
@@ -63,7 +66,7 @@ export function Cursor() {
       reduced.removeEventListener("change", sync);
       root.classList.remove("has-custom-cursor");
     };
-  }, []);
+  }, [onAdmin]);
 
   useEffect(() => {
     if (!enabled) return;

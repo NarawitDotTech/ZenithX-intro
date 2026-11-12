@@ -3,7 +3,7 @@ import { HeroLogo } from "@/components/motion/HeroLogo";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
-import { memberCount, phases, team, units } from "@/content/notebook";
+import { capitalize, memberCount, numberWord, phases, team, units } from "@/content/notebook";
 
 const stats = [
   { value: String(memberCount), label: "Team members" },
@@ -33,8 +33,9 @@ export const Hero = () => (
       <div className="mt-8 grid gap-10 md:mt-10 md:grid-cols-[1fr_auto] md:items-end">
         <Reveal delay={0.4}>
           <p className="max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-            Team <span className="font-mono text-text">#{team.number}</span>. Thirteen students, three
-            units, one robot — and the notebook of how we&apos;re building it.
+            Team <span className="font-mono text-text">#{team.number}</span>.{" "}
+            {capitalize(numberWord(memberCount))} students, {numberWord(units.length)} units, one robot — and the
+            notebook of how we&apos;re building it.
           </p>
         </Reveal>
         <Reveal delay={0.55}>

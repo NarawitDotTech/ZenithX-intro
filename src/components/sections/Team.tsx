@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { memberCount, units } from "@/content/notebook";
+import { capitalize, memberCount, numberWord, units } from "@/content/notebook";
 import { SectionHeader } from "./SectionHeader";
 
 export const Team = () => (
@@ -8,13 +8,13 @@ export const Team = () => (
       <SectionHeader
         index="03"
         eyebrow={`The crew · ${memberCount} members`}
-        title="Three units. One team."
+        title={`${capitalize(numberWord(units.length))} ${units.length === 1 ? "unit" : "units"}. One team.`}
         intro="Roles were set at our first meeting so everyone knows what they own — and who to call when it breaks."
       />
 
       <div className="grid gap-4 md:grid-cols-3">
         {units.map((unit, i) => (
-          <Reveal key={unit.name} delay={i * 0.08} className="h-full">
+          <Reveal key={`${unit.name}-${i}`} delay={i * 0.08} className="h-full">
             <article
               data-cursor="hover"
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface p-6 transition-colors duration-300 hover:border-accent/60 md:p-8"
@@ -30,9 +30,9 @@ export const Team = () => (
               <h3 className="mt-8 text-2xl font-semibold">{unit.name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{unit.focus}</p>
               <ul className="mt-8 flex flex-wrap gap-2 pt-2">
-                {unit.members.map((member) => (
+                {unit.members.map((member, mi) => (
                   <li
-                    key={member}
+                    key={`${member}-${mi}`}
                     className="rounded-full border border-line-strong px-3 py-1.5 text-sm transition-colors group-hover:border-line-strong hover:!border-accent hover:text-accent"
                   >
                     {member}

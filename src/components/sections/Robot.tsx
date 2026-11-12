@@ -35,13 +35,13 @@ export const Robot = () => (
 
         <div>
           <Reveal>
-            <h3 className="text-2xl font-semibold md:text-3xl">Intake method</h3>
+            <h3 className="text-2xl font-semibold md:text-3xl">{intake.title}</h3>
             <p className="mt-4 text-lg leading-relaxed text-muted">{intake.summary}</p>
           </Reveal>
           <Reveal delay={0.1}>
             <dl className="mt-10 divide-y divide-line border-y border-line">
-              {intake.specs.map((spec) => (
-                <div key={spec.label} className="flex items-baseline justify-between gap-6 py-4">
+              {intake.specs.map((spec, si) => (
+                <div key={`${spec.label}-${si}`} className="flex items-baseline justify-between gap-6 py-4">
                   <dt className="font-mono text-xs uppercase tracking-[0.2em] text-muted">{spec.label}</dt>
                   <dd className="text-right font-medium">{spec.value}</dd>
                 </div>

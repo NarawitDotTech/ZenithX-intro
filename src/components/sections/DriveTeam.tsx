@@ -24,7 +24,7 @@ export const DriveTeam = () => (
 
         <ol className="space-y-3">
           {competitionLine.rankings.map((rank, i) => (
-            <li key={rank.name}>
+            <li key={`${rank.place}-${rank.name}`}>
               <Reveal delay={i * 0.1}>
                 <div
                   data-cursor="hover"

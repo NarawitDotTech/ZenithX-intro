@@ -1,0 +1,221 @@
+{
+  "robot": {
+    "title": "Intake method",
+    "summary": "A servo-driven intake paired with rubber bands. The servo actively guides the ball into the robot, while the rubber-band setup gives the control we need and helps drop the ball when it's time.",
+    "specs": [
+      {
+        "label": "Drive",
+        "value": "Servo motor"
+      },
+      {
+        "label": "Grip",
+        "value": "Rubber-band rollers"
+      },
+      {
+        "label": "Job",
+        "value": "Collect, guide, release"
+      }
+    ],
+    "photo": {
+      "src": "/notebook/robot-render.png",
+      "alt": "CAD render of a competition robot chassis with side arms and intake rollers",
+      "width": 1600,
+      "height": 1200
+    }
+  },
+  "units": [
+    {
+      "name": "Booth & Presentation",
+      "focus": "Booth, booth games, presentation, introduction and show",
+      "members": [
+        "Nana",
+        "Kawin",
+        "Pangpoon",
+        "Nacky",
+        "Yada"
+      ]
+    },
+    {
+      "name": "Robot Construction",
+      "focus": "Building the robot, from drivetrain to storage",
+      "members": [
+        "Nain",
+        "Proton",
+        "Ocean",
+        "Phat",
+        "Pun",
+        "Diamond"
+      ]
+    },
+    {
+      "name": "Programming & Design",
+      "focus": "Robot code and robot design",
+      "members": [
+        "Gundam",
+        "Prompt"
+      ]
+    }
+  ],
+  "log": [
+    {
+      "date": "2026-06-08",
+      "title": "First meeting — FTC 2026 & roles",
+      "tag": "",
+      "groups": [
+        {
+          "heading": "",
+          "items": [
+            "Kicked off FTC 2026 and split the team into three units: Booth & Presentation, Robot Construction, and Programming & Design."
+          ]
+        }
+      ],
+      "photos": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Second meeting",
+      "tag": "Pre-season",
+      "groups": [
+        {
+          "heading": "",
+          "items": [
+            "Pre-season starts. The whole team meets in the lab."
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "/notebook/second-meeting-2.jpg",
+          "alt": "Team members at desktop computers in the school lab",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "/notebook/second-meeting-1.jpg",
+          "alt": "Students working at a row of computers during the second meeting",
+          "width": 1280,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Engineering meeting",
+      "tag": "",
+      "groups": [
+        {
+          "heading": "",
+          "items": [
+            "Brainstormed intake methods.",
+            "Talked through the responsibilities and duties of the engineering team."
+          ]
+        }
+      ],
+      "photos": []
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Season update",
+      "tag": "",
+      "groups": [
+        {
+          "heading": "",
+          "items": [
+            "Went through FTC 2026 gameplay and the robot's mechanics."
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "/notebook/meeting-aug-4.jpg",
+          "alt": "Team member presenting to the group in the computer lab",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "/notebook/meeting-aug-3.jpg",
+          "alt": "Team sitting on the floor in a circle discussing the game",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "/notebook/meeting-aug-2.jpg",
+          "alt": "Team members seated in the lab listening to a briefing",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "src": "/notebook/meeting-aug-1.jpg",
+          "alt": "Two team members at computers in the lab",
+          "width": 1280,
+          "height": 960
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Work update",
+      "tag": "",
+      "groups": [
+        {
+          "heading": "Media & Presentation",
+          "items": [
+            "The FTC 2026 banner for Instagram is almost finished."
+          ]
+        },
+        {
+          "heading": "Robot Construction",
+          "items": [
+            "Phat and Ocean selected as the robot's controllers.",
+            "Discussed who will be the Human Player."
+          ]
+        }
+      ],
+      "photos": []
+    },
+    {
+      "date": "2026-10-01",
+      "title": "Final meeting of semester 1",
+      "tag": "",
+      "groups": [
+        {
+          "heading": "Robot Construction",
+          "items": [
+            "Talked through the intake method and other mechanics.",
+            "Selected the Human Player."
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "/notebook/final-meeting.jpg",
+          "alt": "Team members on the lab floor raising their hands during the final meeting",
+          "width": 1600,
+          "height": 1200
+        }
+      ]
+    }
+  ],
+  "driveTeam": {
+    "photo": {
+      "src": "/notebook/competition-line.jpg",
+      "alt": "Hand-drawn tournament bracket on a blackboard with winner and loser lines and final rankings",
+      "width": 1547,
+      "height": 1040
+    },
+    "rankings": [
+      {
+        "name": "Ocean",
+        "role": "Controller"
+      },
+      {
+        "name": "Diamond",
+        "role": "Controller"
+      },
+      {
+        "name": "Phat",
+        "role": "Human Player"
+      }
+    ]
+  }
+}
