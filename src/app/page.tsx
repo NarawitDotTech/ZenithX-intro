@@ -1,4 +1,3 @@
-import { Marquee } from "@/components/motion/Marquee";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { DriveTeam } from "@/components/sections/DriveTeam";
 import { Footer } from "@/components/sections/Footer";
@@ -9,8 +8,6 @@ import { Process } from "@/components/sections/Process";
 import { Robot } from "@/components/sections/Robot";
 import { Team } from "@/components/sections/Team";
 
-const marqueeWords = ["Drivetrain", "Intake", "Storage", "Testing", "Zenith X", "33634"];
-
 export default function Home() {
   return (
     <>
@@ -18,9 +15,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <div className="border-t border-line py-8 md:py-10">
-          <Marquee items={marqueeWords} />
-        </div>
         <Process />
         <Robot />
         <Team />

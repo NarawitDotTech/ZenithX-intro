@@ -37,7 +37,6 @@ export const PhotoFrame = ({ photo, className = "", sizes = "100vw", priority, c
           priority={priority}
           className="h-full w-full object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.04]"
         />
-        <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </button>
 
       <dialog
@@ -45,7 +44,7 @@ export const PhotoFrame = ({ photo, className = "", sizes = "100vw", priority, c
         onClick={(e) => {
           if (e.target === e.currentTarget) close();
         }}
-        className="m-auto max-h-[92vh] w-[min(1200px,94vw)] rounded-2xl border border-line-strong bg-surface p-0 text-text backdrop:bg-bg/85 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[92vh] w-[min(1200px,94vw)] rounded-2xl border border-line-strong bg-surface p-0 text-text backdrop:bg-bg/90"
       >
         <figure className="flex flex-col">
           <Image

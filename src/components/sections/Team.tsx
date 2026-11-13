@@ -1,42 +1,24 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { capitalize, memberCount, numberWord, units } from "@/content/notebook";
+import { memberCount, units } from "@/content/notebook";
 import { SectionHeader } from "./SectionHeader";
 
 export const Team = () => (
-  <section id="team" className="scroll-mt-16 border-t border-line py-24 md:py-36">
+  <section id="team" className="scroll-mt-16 border-t border-line py-24 md:py-32">
     <div className="mx-auto max-w-7xl px-4 md:px-8">
       <SectionHeader
-        index="03"
-        eyebrow={`The crew · ${memberCount} members`}
-        title={`${capitalize(numberWord(units.length))} ${units.length === 1 ? "unit" : "units"}. One team.`}
-        intro="Roles were set at our first meeting so everyone knows what they own — and who to call when it breaks."
+        title="The team"
+        intro={`${memberCount} members in ${units.length} ${units.length === 1 ? "unit" : "units"}. We split up the work at our first meeting.`}
       />
 
       <div className="grid gap-4 md:grid-cols-3">
         {units.map((unit, i) => (
           <Reveal key={`${unit.name}-${i}`} delay={i * 0.08} className="h-full">
-            <article
-              data-cursor="hover"
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface p-6 transition-colors duration-300 hover:border-accent/60 md:p-8"
-            >
-              <span
-                aria-hidden
-                className="absolute -top-px right-6 left-6 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-x-100"
-              />
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono text-xs text-accent">U{i + 1}</span>
-                <span className="font-mono text-xs text-muted">{unit.members.length} members</span>
-              </div>
-              <h3 className="mt-8 text-2xl font-semibold">{unit.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{unit.focus}</p>
-              <ul className="mt-8 flex flex-wrap gap-2 pt-2">
+            <article className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 md:p-8">
+              <h3 className="text-2xl font-semibold">{unit.name}</h3>
+              <p className="mt-2 leading-relaxed text-muted">{unit.focus}</p>
+              <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-1.5 border-t border-line pt-5">
                 {unit.members.map((member, mi) => (
-                  <li
-                    key={`${member}-${mi}`}
-                    className="rounded-full border border-line-strong px-3 py-1.5 text-sm transition-colors group-hover:border-line-strong hover:!border-accent hover:text-accent"
-                  >
-                    {member}
-                  </li>
+                  <li key={`${member}-${mi}`}>{member}</li>
                 ))}
               </ul>
             </article>

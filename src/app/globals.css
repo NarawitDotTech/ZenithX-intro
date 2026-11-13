@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Zenith X design tokens — dark "blueprint" surface, one gold accent (from the hornet logo). */
+/* Zenith X design tokens. Dark surface, one gold accent taken from the hornet logo. */
 :root {
   --bg: #0a0a0b;
   --surface: #141416;

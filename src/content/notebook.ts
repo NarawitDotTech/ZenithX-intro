@@ -1,5 +1,5 @@
-// Site copy. Fixed copy lives here; the editable parts (robot, team, season log,
-// drive team) live in site.json and are changed through /admin.
+// Fixed site copy lives here. The robot, team, season log and drive team live in
+// site.json and are edited through /admin.
 
 import siteJson from "./site.json";
 import type { LogGroup, Photo, SiteContent } from "./types";
@@ -16,48 +16,45 @@ export const team = {
 
 export const process = [
   {
-    title: "Brainstorm & align",
-    body: "We start every project by brainstorming across our three units — Engineering, Booth/Presentation and Programming — with regular whole-team meetings so everyone shares the same picture.",
+    title: "Brainstorm together",
+    body: "Engineering, Booth/Presentation and Programming plan each project together. We hold regular whole-team meetings so nobody works off old information.",
   },
   {
-    title: "Plan it down",
-    body: "Objectives and roadmaps get written down, in digital and paper notes, so every initiative has a clear, trackable path.",
+    title: "Write the plan down",
+    body: "Goals and roadmaps go into our digital and paper notes, so we can check progress against them.",
   },
   {
-    title: "Build in phases",
-    body: "We get the materials we need first, then build in a fixed order and test as we go.",
+    title: "Buy parts, then build in order",
+    body: "We get the materials first, then build the robot in three phases and test after each one.",
   },
 ];
 
 export const phases = [
   {
-    code: "P1",
     title: "Drivetrain",
-    body: "Develop the drivetrain and movement systems — the base everything else sits on.",
+    body: "The drivetrain and movement systems.",
   },
   {
-    code: "P2",
     title: "Intake",
-    body: "Engineer and refine the intake mechanism that brings game balls into the robot.",
+    body: "Building and refining the mechanism that picks up the ball.",
   },
   {
-    code: "P3",
-    title: "Storage & QA",
-    body: "Integrate the storage system, then run rigorous testing to find and fix technical shortcomings.",
+    title: "Storage and testing",
+    body: "Adding the storage system, then testing the whole robot and fixing what fails.",
   },
 ];
 
 export const workStyle = [
-  "Clear roles for everyone, with individual accountability and a shared commitment to our goals.",
-  "Open communication and inclusive brainstorming. We decide democratically — team consensus sets the direction.",
-  "Professional responsibility, purposeful action and sticking to our timelines.",
+  "Everyone has a clear role and is accountable for it.",
+  "We talk openly and brainstorm as a group. Big decisions go to a vote, and the team's consensus sets the direction.",
+  "We take responsibility for our work and stick to our deadlines.",
 ];
 
 export const goals = [
-  "Build professional relationships and real experience through the FIRST Tech Challenge.",
-  "Grow our technical skill in robotics, our public speaking and presentation, and how we work as a team.",
+  "Meet people and get real experience by competing in the FIRST Tech Challenge.",
+  "Get better at robotics, public speaking and working as a team.",
   "Win at least one award this season.",
-  "Share what we learn and mentor others, to grow our community and inspire interest in engineering.",
+  "Share what we learn and help other students get into engineering.",
 ];
 
 // ---- Editable content (site.json) ----
@@ -112,11 +109,3 @@ export const competitionLine = {
   photo: site.driveTeam.photo,
   rankings: site.driveTeam.rankings.map((r, i) => ({ place: i + 1, ...r })),
 };
-
-const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-  "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
-
-/** 3 -> "three"; numbers past twenty stay as digits. */
-export const numberWord = (n: number) => WORDS[n] ?? String(n);
-
-export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

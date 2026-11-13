@@ -1,4 +1,4 @@
-// Shape of src/content/site.json — the part of the site the admin panel edits.
+// Shape of src/content/site.json, the part of the site the admin panel edits.
 
 export type Photo = {
   src: string;

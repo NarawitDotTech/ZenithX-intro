@@ -49,7 +49,7 @@ export const LogEditor = ({ value, onChange }: EditorProps<"log">) => {
   const removeEntry = (i: number) => {
     const entry = value[i];
     const name = entry.title.trim() || "this untitled entry";
-    if (!window.confirm(`Delete “${name}” (${formatDate(entry.date)})? This can't be undone after you publish.`)) return;
+    if (!window.confirm(`Delete "${name}" (${formatDate(entry.date)})? You can't undo this after you publish.`)) return;
     onChange(value.filter((_, ei) => ei !== i));
     setOpen(new Set());
   };
@@ -257,7 +257,7 @@ export const TeamEditor = ({ value, onChange }: EditorProps<"units">) => {
                   noun="unit"
                   onMove={(to) => onChange(move(value, i, to))}
                   onRemove={() => {
-                    if (window.confirm(`Remove the “${unit.name || "untitled"}” unit and its member list?`)) {
+                    if (window.confirm(`Remove the "${unit.name || "untitled"}" unit and its member list?`)) {
                       onChange(value.filter((_, x) => x !== i));
                     }
                   }}

@@ -217,8 +217,8 @@ const SignIn = ({ onSignIn }: { onSignIn: (cfg: RepoConfig, remember: boolean) =
       <Logo className="mb-8 h-14 w-auto text-accent" />
       <h1 className="text-3xl font-semibold">Site admin</h1>
       <p className="mt-2 text-muted">
-        Edits are saved to the team&apos;s GitHub repository, then the live site rebuilds in a minute or two. Sign in
-        with a GitHub token that can write to the repo.
+        Publishing saves your edits to the team&apos;s GitHub repo, and the live site rebuilds a minute or two later.
+        Sign in with a GitHub token that can write to the repo.
       </p>
 
       <Card className="mt-8">
@@ -246,7 +246,7 @@ const SignIn = ({ onSignIn }: { onSignIn: (cfg: RepoConfig, remember: boolean) =
             value={token}
             onChange={setToken}
             placeholder="github_pat_…"
-            hint="Stays in this browser only. It's sent to GitHub and nowhere else."
+            hint="The token stays in this browser. The admin only ever sends it to GitHub."
           />
 
           <details className="rounded-lg border border-line px-4 py-3 text-sm">
@@ -404,7 +404,7 @@ const Editor = ({
           kind: "error",
           conflict: true,
           message:
-            "Someone else published changes since you opened the admin. Reload to get their version, then redo your edits (your current edits will be discarded).",
+            "Someone else published changes after you opened the admin. Reload to get their version, then redo your edits. Reloading throws away your unpublished changes.",
         });
       } else {
         setStatus({ kind: "error", message: err instanceof Error ? err.message : "Publishing failed. Try again." });
@@ -530,7 +530,7 @@ const PublishBar = ({
           <>
             <p className="text-sm">
               <span className="font-medium text-accent">Published.</span>{" "}
-              <span className="text-muted">The live site updates in about 1–2 minutes, once Cloudflare rebuilds.</span>{" "}
+              <span className="text-muted">Cloudflare is rebuilding the site. Changes go live in a minute or two.</span>{" "}
               <a href={status.commitUrl} target="_blank" rel="noreferrer" className="text-accent underline">
                 View on GitHub
               </a>

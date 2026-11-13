@@ -78,12 +78,8 @@ export const HeroLogo = ({ className = "" }: HeroLogoProps) => {
   return (
     <div ref={wrapRef} className={`[perspective:900px] ${className}`}>
       <div ref={tiltRef} className="[transform-style:preserve-3d]">
-        <div ref={floatRef} className="relative">
-          <span
-            aria-hidden
-            className="absolute inset-[12%] -z-10 rounded-full bg-[radial-gradient(circle,rgb(199_168_88/0.35),transparent_65%)] blur-2xl"
-          />
-          <Logo title="Zenith X hornet logo" className="h-auto w-full text-accent drop-shadow-[0_10px_40px_rgb(199_168_88/0.25)]" />
+        <div ref={floatRef}>
+          <Logo title="Zenith X hornet logo" className="h-auto w-full text-accent" />
         </div>
       </div>
     </div>

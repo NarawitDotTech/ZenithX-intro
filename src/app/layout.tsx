@@ -14,9 +14,9 @@ const code = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zenith X 33634 — FTC 2026 Engineering Notebook",
+  title: "Zenith X · FTC team 33634",
   description:
-    "Zenith X, FIRST Tech Challenge team 33634: our process, our robot's intake, our team and our season log for FTC 2026.",
+    "Engineering notebook of Zenith X, FIRST Tech Challenge team 33634, for the 2026 season.",
 };
 
 export const viewport: Viewport = {

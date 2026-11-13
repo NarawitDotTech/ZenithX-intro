@@ -1,19 +1,19 @@
 {
   "robot": {
     "title": "Intake method",
-    "summary": "A servo-driven intake paired with rubber bands. The servo actively guides the ball into the robot, while the rubber-band setup gives the control we need and helps drop the ball when it's time.",
+    "summary": "The intake uses a servo and rubber bands. The servo pulls the ball into the robot. The rubber bands keep the ball under control and help drop it when it's time.",
     "specs": [
       {
-        "label": "Drive",
-        "value": "Servo motor"
+        "label": "Motor",
+        "value": "Servo"
       },
       {
         "label": "Grip",
-        "value": "Rubber-band rollers"
+        "value": "Rubber bands"
       },
       {
-        "label": "Job",
-        "value": "Collect, guide, release"
+        "label": "What it does",
+        "value": "Pulls the ball in, then drops it"
       }
     ],
     "photo": {
@@ -59,7 +59,7 @@
   "log": [
     {
       "date": "2026-06-08",
-      "title": "First meeting — FTC 2026 & roles",
+      "title": "First meeting about FTC 2026 and roles",
       "tag": "",
       "groups": [
         {
@@ -107,7 +107,7 @@
           "heading": "",
           "items": [
             "Brainstormed intake methods.",
-            "Talked through the responsibilities and duties of the engineering team."
+            "Went over what the engineering team is responsible for."
           ]
         }
       ],

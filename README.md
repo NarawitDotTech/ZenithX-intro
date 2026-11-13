@@ -1,15 +1,15 @@
-# Zenith X — FTC 2026 site
+# Zenith X FTC 2026 site
 
 Website for FIRST Tech Challenge team **Zenith X (#33634)**, built from our engineering notebook.
 
-Next.js (App Router) + Tailwind CSS + GSAP. Custom cursor, scroll reveals, magnetic buttons, scroll-velocity marquee and a pointer-tracking hero. All motion turns off under `prefers-reduced-motion`, and the custom cursor only runs on mouse/trackpad devices.
+Next.js (App Router) + Tailwind CSS + GSAP. Custom cursor, scroll reveals, magnetic buttons and a hero glow that follows the pointer. All motion turns off under `prefers-reduced-motion`, and the custom cursor only runs on mouse/trackpad devices.
 
 ```bash
 npm install
 npm run dev   # http://localhost:3000
 ```
 
-- Editable content (season log, robot, team, drive team): `src/content/site.json` — normally edited through `/admin`.
+- Editable content (season log, robot, team, drive team): `src/content/site.json`. Edit it through `/admin`.
 - Fixed copy (process, goals): `src/content/notebook.ts`
 - Photos: `public/notebook/`
 - Sections: `src/components/sections/`
